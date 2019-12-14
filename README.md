@@ -1,5 +1,22 @@
 # AIDungeon2
 
+## Pitaden's Edit
+
+I'm tired of having to always make the tweaks I usually make, so I'm making this fork to mess with it!
+
+### Changes
+
+"you" is no longer automatically appended to actions you make.
+
+Changed things like "you have a " to "you have ", to remove weirdness like "you have a the clothes on your back and a the nothing else"
+
+Generator temperature is slightly reduced from 0.4 to 0.3
+
+New sci-fi scenarios, mostly based on SS13
+
+
+##Original ReadMe Below!
+
 ### The model for AI Dungeon2 is temporarily unavailable to download due to cost. We're working on a solution!
 
 Read more about AIDungeon2 and how it was built [here](https://pcc.cs.byu.edu/2019/11/21/ai-dungeon-2-creating-infinitely-generated-text-adventures-with-deep-learning-language-models/).

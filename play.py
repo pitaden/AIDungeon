@@ -77,9 +77,9 @@ def select_game():
             + character_key
             + " "
             + setting_description
-            + "You have a "
+            + "You have "
             + character["item1"]
-            + " and a "
+            + " and "
             + character["item2"]
             + ". "
         )
@@ -243,15 +243,9 @@ def play_aidungeon_2():
                     result = story_manager.act(action)
                     console_print(result)
 
-                elif action[0] == '"':
-                    action = "You say " + action
-
                 else:
                     action = action.strip()
                     action = action[0].lower() + action[1:]
-
-                    if "You" not in action[:6] and "I" not in action[:6]:
-                        action = "You " + action
 
                     if action[-1] not in [".", "?", "!"]:
                         action = action + "."

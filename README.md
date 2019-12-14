@@ -15,7 +15,7 @@ Generator temperature is slightly reduced from 0.4 to 0.3
 New sci-fi scenarios, mostly based on SS13
 
 
-##Original ReadMe Below!
+## Original ReadMe Below!
 
 ### The model for AI Dungeon2 is temporarily unavailable to download due to cost. We're working on a solution!
 

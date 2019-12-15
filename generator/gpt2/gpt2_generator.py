@@ -13,7 +13,7 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
 
 class GPT2Generator:
-    def __init__(self, generate_num=60, temperature=0.4, top_k=40, top_p=0.9, censor=True):
+    def __init__(self, generate_num=60, temperature=0.3, top_k=40, top_p=0.9, censor=True):
         self.generate_num = generate_num
         self.temp = temperature
         self.top_k = top_k
@@ -75,7 +75,6 @@ class GPT2Generator:
         if len(result) == 0:
             return ""
         first_letter_capitalized = result[0].isupper()
-        result = result.replace('."', '".')
         result = result.replace("#", "")
         result = result.replace("*", "")
         result = result.replace("\n\n", "\n")

@@ -26,17 +26,23 @@ def select_game():
         data = yaml.safe_load(stream)
 
     print("Pick a setting.")
+    console_print("0) randomized")
     settings = data["settings"].keys()
     for i, setting in enumerate(settings):
-        print_str = str(i) + ") " + setting
+        print_str = "{0}) {1}".format(i+1, setting)
         if setting == "fantasy":
             print_str += " (recommended)"
 
         console_print(print_str)
     console_print(str(len(settings)) + ") custom")
-    choice = get_num_options(len(settings) + 1)
+    choice = get_num_options(len(settings) + 2)
 
-    if choice == len(settings):
+    if choice == 0:
+        # TODO RANDOM STORY
+        # return random_story(data)
+        pass
+    
+    if choice == len(settings)+1:
 
         context = ""
         console_print(

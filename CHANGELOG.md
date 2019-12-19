@@ -1,43 +1,22 @@
 # Changelog
-All notable changes to AIDungeon will be documented in this file.
+Changes to this AIDungeon mod, and their dates, will be added here. If I remember to do that.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [[Unreleased]](https://github.com/AIDungeon/AIDungeon/compare/master...develop)
+## 12/19/2019
 
 ### Added
-- This changelog!
-- Formal grammars for the noble, knight, and wizard contexts/prompts.
-- Better regex logic to detect terminal states.
-- Directory `saved_stories`.
-- A few more censored words.
-- Feedback for user for the censor command.
-- iPython notebook utilities to save/load to Google Drive, and an OOM error workaround.
-- install.sh now detects python version and fails if it's not supported.
-- Issue and PR template improvements.
+- This newer changelog!
+- Backport of random scenarios/characters, with player-chosen names
+- Many Sci-fi scenarios, based on SS13
+- Additional Fantasy scenarios
 
 ### Fixed
-- Loading not working on `develop`.
-- Loading now print properly.
-- [No Save Game on Quit for Loaded Games](https://github.com/AIDungeon/AIDungeon/issues/97)
-- install.sh no longer tries calling `apt-get` on distributions without it.
-- Arch Linux now works with install.sh (with pyenv is used or python3.6 is set as python3).
-- A bug that caused game to crash if given an incorrect game ID to load.
+- Crashing due to deleting a variable in UnconstrainedStoryManager that it shouldn't be deleting
 
 ### Changed
-- Made `install.sh` more robust.
-- Sorted imports.
-- Split the model downloading script into `download_model.sh` from `install.sh`.
-- User commands are now case-insensitive.
-- User commands are now denoted with the prefix `/`.
+- "You" is no longer prepended to actions. You can now control other characters through actions like "The orcs swings their axe"
+- Combined the blocks for `install.sh` and `download.sh` into one block. Why were they even separated?!
+- Minor formatting changes in colab
+- The order of fantasy scenarios now shows more "common" scenarios at the top, like wizard/knight, with less common ones towards the bottom
 
-## [2.0.0] - 2019-12-05
-
-### Added
-- AIDungeon 2, which allows players to type in any desired action.
-
-## [1.0.0] - ?
-
-### Added
-- AiDungeon Classic, which gives players action options to choose from.
+### Future Plans
+- Reformat the code in `play.py` to make it less of a pain to read and modify

@@ -2,6 +2,7 @@
 import os
 import sys
 import time
+import random
 
 from generator.gpt2.gpt2_generator import *
 from story import grammars
@@ -20,6 +21,48 @@ def splash():
     else:
         return "new"
 
+def random_story(story_data):
+    # random setting
+    settings = story_data["settings"].keys()
+    n_settings = len(settings)
+    rand_n = random.randint(0, n_settings - 1)
+    for i, setting in enumerate(settings):
+        if i == rand_n:
+            setting_key = setting
+    setting_description = story_data["settings"][setting_key]["description"]
+    
+    # random character
+    characters = story_data["settings"][setting_key]["characters"]
+    n_characters = len(characters)
+    rand_n = random.randint(0, n_characters - 1)
+    for i, character in enumerate(characters):
+        if i == rand_n:
+            character_key = character
+    
+    # non-random name and actual character
+    character = story_data["settings"][setting_key]["characters"][character_key]
+
+    name = input("What is your name?\n")
+    
+    context = (
+        "You are "
+        + name
+        + ", a "
+        + character_key
+        + " "
+        + setting_description
+        + "You have "
+        + character["item1"]
+        + " and "
+        + character["item2"]
+        + ". "
+    )
+    prompt_num = np.random.randint(0, len(character["prompts"]))
+    prompt = character["prompts"][prompt_num]
+    
+    #return setting_key, character_key, name, None, None
+    return context, prompt
+
 
 def select_game():
     with open(YAML_FILE, "r") as stream:
@@ -34,13 +77,11 @@ def select_game():
             print_str += " (recommended)"
 
         console_print(print_str)
-    console_print(str(len(settings)) + ") custom")
+    console_print("{0}) custom".format(str(len(settings)+1)))
     choice = get_num_options(len(settings) + 2)
 
     if choice == 0:
-        # TODO RANDOM STORY
-        # return random_story(data)
-        pass
+        return random_story(data)
     
     if choice == len(settings)+1:
 
@@ -53,7 +94,7 @@ def select_game():
         prompt = input("Starting Prompt: ")
         return context, prompt
 
-    setting_key = list(settings)[choice]
+    setting_key = list(settings)[choice-1]
 
     print("\nPick a character")
     characters = data["settings"][setting_key]["characters"]
@@ -132,7 +173,7 @@ def play_aidungeon_2():
 
     while True:
         if story_manager.story != None:
-            del story_manager.story
+            story_manager.story = None
 
         while story_manager.story is None:
             print("\n\n")
@@ -166,15 +207,11 @@ def play_aidungeon_2():
                 command = split[0].lower()
                 args = split[1:]
                 if command == "restart":
-                    rating = input("Please rate the story quality from 1-10: ")
-                    rating_float = float(rating)
-                    story_manager.story.rating = rating_float
+                    story_manager.story.rating = 5.0
                     break
 
                 elif command == "quit":
-                    rating = input("Please rate the story quality from 1-10: ")
-                    rating_float = float(rating)
-                    story_manager.story.rating = rating_float
+                    story_manager.story.rating = 5.0
                     exit()
 
                 elif command == "nosaving":

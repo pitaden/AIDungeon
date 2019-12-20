@@ -5,6 +5,7 @@
 I'm tired of having to always make the tweaks I usually make, so I'm making this fork to mess with it!
 
 ### Changes
+(Also check out the changelog file!)
 
 "you" is no longer automatically appended to actions you make.
 

@@ -50,12 +50,12 @@ settings:
         
       adventurer:
         prompts: ["You are an adventurer; having heard of a caravan heading north to explore, you and a small group of 
-        like-minded individuals have gathered at a small trade town on the outskirts of Larion. You are on your way to "]
+        like-minded individuals have gathered at a small town on the outskirts of Larion. You are on your way to "]
         item1: "a steel shortsword"
         item2: "a pack of supplies"
 
   mystery:
-    description: "living in Chicago."
+    description: "living in a small town."
     characters:
 
       patient:
@@ -64,14 +64,20 @@ settings:
         item2: "a pack of bandages"
 
       detective:
-        prompts: ["You enter the forest where you believe the criminal you're searching for fled to. Suddenly"]
+        prompts: ["You enter the building where you believe the criminal you're searching for fled to. Suddenly,",
+        You enter the forest where you believe the criminal you're searching for fled to. Suddenly,"]
         item1: "a pistol"
         item2: "a police badge"
 
       spy:
-        prompts: ["You listen to the russian diplomats and hear them discussing"]
+        prompts: ["You stand outside the door of the room and listen to the Russian diplomats. You're wary when you realize they're discussing"]
         item1: "a concealed pistol"
         item2: "a syringe of poison"
+        
+      peasant:
+        prompts: ["You swear you've been seeing strange lights and hearing eldritch noises from an abandoned castle. One day, you decide it's time to investigate it."]
+        item1: "a torch"
+        item2: "some rations"
 
 
   apocalyptic:
@@ -127,46 +133,51 @@ settings:
         item1: "a backpack"
         item2: "a solar powered tablet"
         
+       infected:
+        prompts: ["You've been carefully hiding the bite on your arm from the other survivors. As you examine it, you notice that the wound is starting to turn green."]
+        item1: "a baseball bat"
+        item2: "a backpack"
+        
         
   scifi:
     description: "on-board a spaceship. "
     characters:
       assistant:
-        prompts: ["The spaceship is a plasma research vessel, owned by Nanotrasen, called the NSS Clarion. However, the ship has been having strange malfunctions recently, 
-        and the engineers are too busy to fix them. As you're walking to the cargo bay to fix an airlock, you notice", 
-        "The spaceship is a trade vessel, en route to trade with a space station owned by Nanotrasen. You help with various odd jobs around the ship, and have been asked 
+        prompts: ["The spaceship is a research vessel, owned by a mega-corporation. However, the ship has been having strange malfunctions recently, 
+        and the engineers are too busy to fix them. As you're walking to the cargo bay to fix a computer, you notice", 
+        "The spaceship is a trade vessel, en route to trade with a space station owned by a mega-corporation. You help with various odd jobs around the ship, and have been asked 
         to help with something. On your way there,"]
         item1: "a toolbox"
         item2: "a pair of insulated gloves"
 
       scientist:
-        prompts: ["The spaceship is a plasma research vessel, owned by Nanotrasen, called the NSS Clarion. You use the teleporter to arrange transport between ships 
+        prompts: ["The spaceship is a research vessel owned by a mega-corporation. You use the teleporter to arrange transport between ships 
         and sometimes teleport drinks straight out of the bar. However, as you receive the teleporter, you see"]
         item1: "a beaker"
         item2: "a labcoat"
 
-      syndicate operative:
-        prompts: ["The spaceship is a syndicate assault cruiser. You are a syndicate operative, on your way to attack a Nanotrasen-owned space station. As you prepare 
+      operative:
+        prompts: ["The spaceship you're on is a syndicate assault cruiser. You are a syndicate operative, on your way to attack a major space station. As you prepare 
         the bomb, you hear another operative speak over the radio, saying", 
-        "The spaceship is a stolen Nanotrasen trade ship. You are a syndicate operative, tasked with 
-        infiltrating a Nanotrasen space station. As you arrive near the station,"]
+        "The spaceship you're on is a stolen trade ship. You are a syndicate operative, tasked with 
+        infiltrating a nearby space station. As you arrive near the station,"]
         item1: "a revolver"
         item2: "a soviet spacesuit"
 
       security:
-        prompts: ["The spaceship is a plasma research vessel, owned by Nanotrasen, called the NSS Clarion. You've been hired to prevent other corporations from learning 
-        about plasma's power. You hear a commotion, and as you turn the corner, you see", 
-        "The spaceship is a trade vessel, en route to trade with a space station owned by Nanotrasen. As the ship approaches the station, "]
+        prompts: ["The spaceship is a research vessel, heading towards. You've been hired to prevent other corporations from learning 
+        about the top-secret research. You hear a commotion, and as you turn the corner, you see", 
+        "The spaceship is a trade vessel, en route to trade with a space station owned by a mega-corporation. As the ship approaches the station, "]
         item1: "a stun baton"
         item2: "a taser"
 
       captain:
-        prompts: ["You are the captain of the spaceship, the NSS Clarion, and work under Nanotrasen. You try to keep order on the ship, but you're worried. You've 
-        heard rumors of a mutiny aboard the ship."]
+        prompts: ["You are the captain of the spaceship, and work for a mega-corporation. You try to keep order on the ship, but you're worried. You've 
+        heard rumors of a mutiny."]
         item1: "an energy gun"
         item2: "your prized bonsai tree"
 
       engineer:
-        prompts: ["The spaceship is a vessel owned by Nanotrasen called the NSS Clarion. You've been sent to repair one of the thrusters. As you enter the engine room, however,"]
+        prompts: ["The spaceship is a research vessel on its way to another star system. Recently, the ship has been having strange malfunctions, and you've been sent to repair one of the thrusters. As you enter the engine room, however,"]
         item1: "various tools"
         item2: "a fire extinguisher"

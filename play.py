@@ -22,8 +22,6 @@ def splash():
         return "new"
 
 def random_story(story_data):
-    # random setting
-	
     # the old code here did some funky stuff with enumerate, random numbers, etc. random.choice did the same thing they were doing.
     setting_key = random.choice(story_data["settings"].keys())
     setting_description = story_data["settings"][setting_key]["description"]

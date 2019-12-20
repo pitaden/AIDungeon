@@ -23,23 +23,13 @@ def splash():
 
 def random_story(story_data):
     # random setting
-    settings = story_data["settings"].keys()
-    n_settings = len(settings)
-    rand_n = random.randint(0, n_settings - 1)
-    for i, setting in enumerate(settings):
-        if i == rand_n:
-            setting_key = setting
+	
+	# the old code here did some funky stuff with enumerate, random numbers, etc. random.choice did the same thing they were doing.
+	setting_key = random.choice(story_data["settings"].keys())
     setting_description = story_data["settings"][setting_key]["description"]
-    
-    # random character
-    characters = story_data["settings"][setting_key]["characters"]
-    n_characters = len(characters)
-    rand_n = random.randint(0, n_characters - 1)
-    for i, character in enumerate(characters):
-        if i == rand_n:
-            character_key = character
-    
-    # non-random name and actual character
+	
+    character_key = random.choice(story_data["settings"][setting_key]["characters"])
+	
     character = story_data["settings"][setting_key]["characters"][character_key]
 
     name = input("What is your name?\n")
@@ -72,11 +62,7 @@ def select_game():
     console_print("0) randomized")
     settings = data["settings"].keys()
     for i, setting in enumerate(settings):
-        print_str = "{0}) {1}".format(i+1, setting)
-        if setting == "fantasy":
-            print_str += " (recommended)"
-
-        console_print(print_str)
+        console_print("{0}) {1}".format(i+1, setting))
     console_print("{0}) custom".format(str(len(settings)+1)))
     choice = get_num_options(len(settings) + 2)
 

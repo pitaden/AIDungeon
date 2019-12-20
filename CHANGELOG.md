@@ -1,6 +1,17 @@
 # Changelog
 Changes to this AIDungeon mod, and their dates, will be added here. If I remember to do that.
 
+## 12/20/2019
+
+### Added
+- Some new scenarios to mystery, zombie
+
+### Fixed
+- The colab was pulling from the wrong branch (master instead of develop)
+
+### Changed
+- The wording of some sci-fi scenarios to be more generic
+
 ## 12/19/2019
 
 ### Added

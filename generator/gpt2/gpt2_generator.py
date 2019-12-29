@@ -13,7 +13,7 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
 
 class GPT2Generator:
-    def __init__(self, generate_num=60, temperature=0.3, top_k=40, top_p=0.9, censor=True):
+    def __init__(self, generate_num=60, temperature=0.3, top_k=40, top_p=0.7, censor=True):
         self.generate_num = generate_num
         self.temp = temperature
         self.top_k = top_k
@@ -79,8 +79,6 @@ class GPT2Generator:
         result = result.replace("*", "")
         result = result.replace("\n\n", "\n")
         # result = first_to_second_person(result)
-        if self.censor:
-            result = remove_profanity(result)
 
         if not first_letter_capitalized:
             result = result[0].lower() + result[1:]

@@ -65,7 +65,7 @@ settings:
 
       detective:
         prompts: ["You enter the building where you believe the criminal you're searching for fled to. Suddenly,",
-        You enter the forest where you believe the criminal you're searching for fled to. Suddenly,"]
+        "You enter the forest where you believe the criminal you're searching for fled to. Suddenly,"]
         item1: "a pistol"
         item2: "a police badge"
 

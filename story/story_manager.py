@@ -130,11 +130,9 @@ class Story:
         save_path = "./saved_stories/"
 
         if not os.path.exists(save_path):
-            return "Error save not found."
+            return "Error: save not found."
 
         file_name = "story" + story_id + ".json"
-        cmd = "gsutil cp gs://aidungeonstories/" + file_name + " " + save_path
-        os.system(cmd)
         exists = os.path.isfile(os.path.join(save_path, file_name))
 
         if exists:
@@ -143,7 +141,7 @@ class Story:
             self.init_from_dict(game)
             return str(self)
         else:
-            return "Error save not found."
+            return "Error: save has invalid json."
 
 
 class StoryManager:
@@ -166,14 +164,12 @@ class StoryManager:
 
     def load_new_story(self, story_id, upload_story=False):
         file_name = "story" + story_id + ".json"
-        cmd = "gsutil cp gs://aidungeonstories/" + file_name + " ."
-        os.system(cmd)
-        exists = os.path.isfile(file_name)
+        exists = os.path.isfile("/content/AIDungeon/saved_stories/"+file_name)
 
         if not exists:
-            return "Error save not found."
+            return "Error: save not found."
 
-        with open(file_name, "r") as fp:
+        with open("/content/AIDungeon/saved_stories/"+file_name, "r") as fp:
             game = json.load(fp)
         self.story = Story("", upload_story=upload_story)
         self.story.init_from_dict(game)

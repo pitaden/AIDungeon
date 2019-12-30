@@ -109,7 +109,6 @@ settings:
 
   zombies:
     description: " trying to survive in a world filled with infected zombies everywhere."
-
     characters:
       soldier:
         prompts: ["Your unit lost a lot of men when the infection broke, but you've managed to keep the small town
@@ -133,7 +132,7 @@ settings:
         item1: "a backpack"
         item2: "a solar powered tablet"
         
-       infected:
+      infected:
         prompts: ["You've been carefully hiding the bite on your arm from the other survivors. As you examine it, you notice that the wound is starting to turn green."]
         item1: "a baseball bat"
         item2: "a backpack"

@@ -53,6 +53,11 @@ settings:
         like-minded individuals have gathered at a small town on the outskirts of Larion. You are on your way to "]
         item1: "a steel shortsword"
         item2: "a pack of supplies"
+      
+      kobold:
+        prompts: ["You have left your tribe and cave in search of adventure."]
+        item1: "a small staff"
+        item2: "a spellbook, and a small knife"
 
   mystery:
     description: "living in a small town."
@@ -82,7 +87,6 @@ settings:
 
   apocalyptic:
     description: " trying to survive in a post apocalyptic world by scavenging among the ruins of what is left."
-
     characters:
 
       soldier:
@@ -106,6 +110,16 @@ settings:
         knows the roads well enough to get your parcel of letters there. You set out in the morning and"]
         item1: "a parcel of letters"
         item2: "a small pistol"
+        
+      mutant:
+        prompts: ["In the colony you were born in, your strange condition was considered a curse, and you were banished long ago. After a long journey, you find an abandoned bunker. You see"]
+        item1: "scales on your face"
+        item2: "a third arm"
+    
+      headhunter:
+        prompts: ["You are driving your rusty motorbike, searching for your target. You eventually arrive at a colony and stop the engine. You take a look around and see"]
+        item1: "a set of binoculars"
+        item2: "an old shotgun"
 
   zombies:
     description: " trying to survive in a world filled with infected zombies everywhere."
@@ -150,16 +164,16 @@ settings:
         item2: "a pair of insulated gloves"
 
       scientist:
-        prompts: ["The spaceship is a research vessel owned by a mega-corporation. You use the teleporter to arrange transport between ships 
+        prompts: ["The spaceship is a research vessel owned by a mega-corporation. You normally use the teleporter to arrange transport between ships 
         and sometimes teleport drinks straight out of the bar. However, as you receive the teleporter, you see"]
         item1: "a beaker"
         item2: "a labcoat"
 
-      operative:
+      syndicate operative:
         prompts: ["The spaceship you're on is a syndicate assault cruiser. You are a syndicate operative, on your way to attack a major space station. As you prepare 
-        the bomb, you hear another operative speak over the radio, saying", 
+        the bomb, you hear another operative speak over the radio", 
         "The spaceship you're on is a stolen trade ship. You are a syndicate operative, tasked with 
-        infiltrating a nearby space station. As you arrive near the station,"]
+        stealthily infiltrating a nearby space station. As you arrive near the station,"]
         item1: "a revolver"
         item2: "a soviet spacesuit"
 
@@ -172,11 +186,16 @@ settings:
 
       captain:
         prompts: ["You are the captain of the spaceship, and work for a mega-corporation. You try to keep order on the ship, but you're worried. You've 
-        heard rumors of a mutiny."]
+        heard rumors of a mutiny. You look outside of the bridge and see"]
         item1: "an energy gun"
         item2: "your prized bonsai tree"
 
       engineer:
-        prompts: ["The spaceship is a research vessel on its way to another star system. Recently, the ship has been having strange malfunctions, and you've been sent to repair one of the thrusters. As you enter the engine room, however,"]
+        prompts: ["The spaceship is a research vessel on its way to another star system. Recently, the ship has been having strange malfunctions, and you've been sent to repair one of the components. As you enter the engine room, however,"]
         item1: "various tools"
         item2: "a fire extinguisher"
+        
+      freighter pilot:
+        prompts: ["You spent the last of your credits to buy an old freighter. It's outdated, slow, and practically falling apart, but it flies. You've just taken on a load of cargo, and you are now flying alone to a nearby star. As you arrive at your destination,"]
+        item1: "an emergency flashlight"
+        item2: "nothing else"

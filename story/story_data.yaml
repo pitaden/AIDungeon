@@ -50,7 +50,7 @@ settings:
         
       adventurer:
         prompts: ["You are an adventurer; having heard of a caravan heading north to explore, you and a small group of 
-        like-minded individuals have gathered at a small town on the outskirts of Larion. You are on your way to "]
+        like-minded individuals gathered at a small town on the outskirts of Larion. You and the other adventurers were on your way to the northern wilds when "]
         item1: "a steel shortsword"
         item2: "a pack of supplies"
       

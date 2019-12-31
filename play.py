@@ -23,12 +23,13 @@ def splash():
 
 def random_story(story_data):
     # the old code here did some funky stuff with enumerate, random numbers, etc. random.choice did the same thing they were doing.
-    setting_key = random.choice(story_data["settings"].keys())
+    setting_key = random.choice(list(story_data["settings"].keys()))
     setting_description = story_data["settings"][setting_key]["description"]
-	
-    character_key = random.choice(story_data["settings"][setting_key]["characters"])
-	
-    character = story_data["settings"][setting_key]["characters"][character_key]
+  
+    #originally character_key but it kept confusing me damnit
+    role_key = random.choice(list(story_data["settings"][setting_key]["characters"]))
+    
+    character = story_data["settings"][setting_key]["characters"][role_key]
 
     name = input("What is your name?\n")
     

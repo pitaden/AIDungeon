@@ -37,7 +37,7 @@ def random_story(story_data):
         "You are "
         + name
         + ", a "
-        + character_key
+        + role_key
         + " "
         + setting_description
         + "You have "

@@ -91,32 +91,21 @@ def select_game():
     setting_description = data["settings"][setting_key]["description"]
     character = data["settings"][setting_key]["characters"][character_key]
 
-    name_token = "<NAME>"
-    if (
-        character_key == "noble"
-        or character_key == "knight"
-        or character_key == "wizard"
-    ):
-        context = grammars.generate(setting_key, character_key, "context") + "\n\n"
-        context = context.replace(name_token, name)
-        prompt = grammars.generate(setting_key, character_key, "prompt")
-        prompt = prompt.replace(name_token, name)
-    else:
-        context = (
-            "You are "
-            + name
-            + ", a "
-            + character_key
-            + " "
-            + setting_description
-            + "You have "
-            + character["item1"]
-            + " and "
-            + character["item2"]
-            + ". "
-        )
-        prompt_num = np.random.randint(0, len(character["prompts"]))
-        prompt = character["prompts"][prompt_num]
+    context = (
+        "You are "
+        + name
+        + ", a "
+        + character_key
+        + " "
+        + setting_description
+        + "You have "
+        + character["item1"]
+        + " and "
+        + character["item2"]
+        + ". "
+    )
+    prompt_num = np.random.randint(0, len(character["prompts"]))
+    prompt = character["prompts"][prompt_num]
 
     return context, prompt
 

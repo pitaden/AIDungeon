@@ -1,4 +1,36 @@
 {
+    "fantasy_name" : ["Larion", "Vijeh", "Francia", "Paiva", "Mederos", "Radu", "Hatami", "Shirish", "Saralyn", "Leka", "Rukaj", "Nardis", "Isett", "Jacczak", "Hamma", "Narala", "Alstine", "Gimello", "Elsbury", "Rubino", "Misra", "Paterno", "Gassan", "Galardo", "Raeder", "Garriel", "Routh", "Bindi", "Renfro", "Harnid", "Enlou", "Amato", "Zurito", "Dimyan", "Arteaga", "Isgrigg", "Maida", "Mudra", "Beranek", "Aric", "Sadri", "Javan", "Wedriwin", "Umiemma", "Thaosean", "Alilawia", "Gwoia", "Galuswen", "Astedrinyth", "Wicolian", "Ziadan", "Thema", "Unirakon", "Severiveth", "Onalath", "Aaolla", "Airadan", "Legiallan", "Zayhan", "Afania", "Ibalegord", "Oligolind", "Celadon", "Alaleria", "Ocelith", "Eowaoviel", "Brigobard", "Griwen", "Frykoth", "Crilawen", "Memas", "Adrardong", "Nomaf", "Crirabeth", "Cadaed", "Broethien", "Astok", "Seraria", "Dreratlan", "Frireven", "Birahan", "Horeria", "Areriw", "Jerenia", "Alaodan", "Paeviel", "Cigowyr", "Lariesa", "Eroreth", "Sevoan", "Careg", "Thoijan", "Raywen", "Seikor", "Wilini", "Alerradon", "Unerrarith", "Agrohawyn", "Zilirith", "Brilann", "Eliawien", "Wirakor", "Gaeven", "Kiewin", "Umalia", "Prirep", "Rhalebeth", "Aaylin", "Qelindra", "Adwayder", "Rothien", "Brendabaen", "Galeliven", "Ethaykon", "Waowiel", "Qerijan", "Aavia", "Kaeinnon", "Rhycia", "Gligobard", "Zolle", "Sear", "Haeasien", "Fiakor"],
+    
+    "common_metal" : ["copper", "bronze", "iron", "steel"],
+    "rare_metal" : ["gold", "silver", "platinum", "mithril"],
+    "legendary_metal" : ["adamantine"],
+    
+    "common_material" : ["#common_metal#", "wooden"],
+    "legendary_material" : ["#legendary_metal#", "dragonbone"]
+    
+    "small_blade" = ["dagger", "knife", "dirk", "shortsword", "hatchet"],
+    "blade" = ["longsword", "greatsword", "claymore", "battleaxe", "spear", "lance"],
+    "ranged" = ["hand crossbow", "crossbow", "shortbow", "longbow"],
+    
+    "weapon" : ["#small_blade#", "#blade#", "#ranged#"],
+    "weapon_magic" = ["staff", "greatstaff", "wand", "runed #weapon#", "enchanted #weapon#"],
+    
+    "armor" : ["brigandine", "set of chainmail", "set of plate armor", "leather armor", "buckler", "tower shield"]
+    
+    "trinket" : ["a ring", "a pendant", "a letter", "some rations", "a #common_metal# #small_blade#", "nothing else"]
+    
+    "evil_creature" : ["horror", "cockatrice", "demon", "dragon", "elemental", "giant", "gorgon", "harpy", "imp", "wraith", "troll", "zombie"],
+    "artifacts" : ["#weapon", "weapon_magic", "armor"],
+    "searching_for" : ["the #evil_creature#", "the #artifacts# of #fantasy_name#"],
+    
+    "environments" : ["the mountains", "a forest", "plains", "a village", "some ruins", "an abandoned watchtower"],
+    
+    "knight":"You are a knight travelling in the kingdom of #fantasy_name#. You have a #common_metal# #weapon# and #trinket#, and are wearing a #armor#. You are searching for #searching_for#, and have just entered #environments# while searching for it when"
+    
+    "wizard":"You are a wizard travelling in the kingdom of #fantasy_name#. You have a #weapon_magic#, #trinket#, and a spellbook. You have just arrived at #environments# in your search for the #artifacts# of #fantasy_name#. You look around and see"
+    
+    
+    
     "rare_sense" : ["taste", "smell", "watch", "observe", "monitor", "look"],
     "sense" : ["see", "hear", "sense", "feel", "notice", "#rare_sense#"],
     "remember" : ["remember", "recall", "recollect"],

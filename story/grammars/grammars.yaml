@@ -1,0 +1,44 @@
+grammars:
+  fantasy:
+    name:  ["Larion", "Vijeh", "Francia", "Paiva", "Mederos", "Radu", "Hatami", "Shirish", "Saralyn", "Leka", "Rukaj", "Nardis", "Isett", "Jacczak", "Hamma", "Narala", "Alstine", "Gimello", "Elsbury", "Rubino", "Misra", "Paterno", "Gassan", "Galardo", "Raeder", "Garriel", "Routh", "Bindi", "Renfro", "Harnid", "Enlou", "Amato", "Zurito", "Dimyan", "Arteaga", "Isgrigg", "Maida", "Mudra", "Beranek", "Aric", "Sadri", "Javan", "Wedriwin", "Umiemma", "Thaosean", "Alilawia", "Gwoia", "Galuswen", "Astedrinyth", "Wicolian", "Ziadan", "Thema", "Unirakon", "Severiveth", "Onalath", "Aaolla", "Airadan", "Legiallan", "Zayhan", "Afania", "Ibalegord", "Oligolind", "Celadon", "Alaleria", "Ocelith", "Eowaoviel", "Brigobard", "Griwen", "Frykoth", "Crilawen", "Memas", "Adrardong", "Nomaf", "Crirabeth", "Cadaed", "Broethien", "Astok", "Seraria", "Dreratlan", "Frireven", "Birahan", "Horeria", "Areriw", "Jerenia", "Alaodan", "Paeviel", "Cigowyr", "Lariesa", "Eroreth", "Sevoan", "Careg", "Thoijan", "Raywen", "Seikor", "Wilini", "Alerradon", "Unerrarith", "Agrohawyn", "Zilirith", "Brilann", "Eliawien", "Wirakor", "Gaeven", "Kiewin", "Umalia", "Prirep", "Rhalebeth", "Aaylin", "Qelindra", "Adwayder", "Rothien", "Brendabaen", "Galeliven", "Ethaykon", "Waowiel", "Qerijan", "Aavia", "Kaeinnon", "Rhycia", "Gligobard", "Zolle", "Sear", "Haeasien", "Fiakor"],
+    common_metal: ["copper", "bronze", "iron", "steel"],
+    rare_metal: ["gold", "silver", "platinum", "mithril"],
+    legendary_metal: ["adamantine"],
+
+    common_material: ["#common_metal#", "wooden"],
+    legendary_material: ["#legendary_metal#", "dragonbone"]
+
+    small_blade: ["dagger", "knife", "dirk", "shortsword", "hatchet"],
+    blade: ["longsword", "greatsword", "claymore", "battleaxe", "spear", "lance"],
+    blunt: ["mace", "flanged mace", "warhammer", "hammer"]
+    polearm: ["halberd", "glaive", "spear", "pitchfork"]
+    ranged: ["hand crossbow", "crossbow", "shortbow", "longbow"],
+    weapon: ["#small_blade#", "#blade#", "#ranged#", "#blunt#", "#polearm#"],
+    weapon_magic: ["staff", "greatstaff", "wand", "runed #weapon#", "enchanted #weapon#"],
+
+    armor: ["brigandine", "chainmail", "plate armor", "leather armor", "buckler", "tower shield"]
+
+    trinket: ["a ring", "a pendant", "a letter", "some rations", "a pouch of coins", "a candle", "a coil of rope"]
+
+    evil_creature: ["horror", "cockatrice", "demon", "dragon", "elemental", "giant", "gorgon", "harpy", "imp", "wraith", "troll", "zombie"],
+    artifacts: ["#weapon#", "#weapon_magic#", "#armor#", "ring", "pendant", "grail"],
+    art_adj: ["black", "crimson", "golden", "glowing", "corrupted", "chaotic", "heavenly", "holy", "#legendary_material#"]
+    searching_for: ["the #evil_creature#", "the #artifacts# of #fantasy_name#", "the #art_adj# #artifacts#"],
+
+    environments: ["the mountains", "a cave", "a forest", "plains", "a village", "some ruins", "an abandoned watchtower"],
+
+    notetoself: "delete and integrate into story_data.yaml, this doesn't even need to be its own section here"
+    prompts:
+      knight: "You are a knight travelling in the kingdom of #fantasy_name#. You have a #common_metal# #weapon# and #trinket#, and are wearing #armor#. You are searching for #searching_for#, and have just entered #environments# when"
+
+      wizard: "You are a wizard travelling in the kingdom of #fantasy_name#. You have a #weapon_magic#, #trinket#, and a spellbook. You have just arrived at #environments# in your quest for #searching_for#. You look around and see"
+
+      noble: "You are a wealthy noble in the kingdom of #fantasy_name#. You have a #rare_metal# #small_blade#, #trinket#, and #trinket#. You are awoken by one of your servants, who tells you that your land is under attack. You get up and look out the window, and see"
+
+      rouge_steal: ["gold", "riches", "food", "supplies", "wealth", "someone's land"]
+      rogue: "You are a rogue in the kingdom of #fantasy_name#. You have a #small_blade# and #trinket#, and you plan on using them to steal #rogue_steal#. As you wander through the city, looking for a target to steal from, you see"
+
+      hunter_animal: ["deer", "boar", "elk", "pheasant"]
+      hunter: "You are a hunter making a living in the kingdom of #fantasy_name#. You've finally found the #hunter_animal# you've been tracking, and ready your #ranged#. As you raise it to shoot, "
+
+
